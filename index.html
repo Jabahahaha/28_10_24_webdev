@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bron</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <nav class="navbar">
+          <h1>bron</h1>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-overlay"></div>
+      </header>
+      <main>
+        <div class="tile-container">
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>UK Bron</h3>
+            <img src="img/a2cc1aaeb243d9a7fb65b293ff9bd013.jpg" alt="Image 1">
+          </div>
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>Dark Bron</h3>
+            <img src="img/ab67616d00001e0207f1d552b36c5466cf800299.jpeg" alt="Image 2">
+          </div>
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>Egypt Bron</h3>
+            <img src="img/artworks-1mPs5l6yIJKxCZV7-yIGJFA-t500x500.jpg" alt="Image 3">
+          </div>
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>Jamaican Bron</h3>
+            <img src="img/artworks-94hTMwuwOuVVuv5t-I6RLvg-t1080x1080.jpg" alt="Image 4">
+          </div>
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>Disco Bron</h3>
+            <img src="img/artworks-dZ4tysarG7klLLKO-4bGcBg-t240x240.jpg" alt="Image 5">
+          </div>
+          <div class="tile" onclick="openLightbox(this)">
+            <h3>Sunshine Bron</h3>
+            <img src="img/images.jpeg" alt="Image 6">
+          </div>
+        </div>
+        <section class="extra-content">
+          <h2>Yap</h2>
+          <p>Boy oh boy where do I even begin. Lebron... honey, my pookie bear. I have loved you ever since I first laid eyes on you. The way you drive into the paint and strike fear into your enemies eyes. Your silky smooth touch around the rim, and that gorgeous jumpshot. I would do anything for you. I wish it were possible to freeze time so I would never have to watch you retire. You had a rough childhood, but you never gave up hope. You are even amazing off the court, you're a great husband and father, sometimes I even call you dad. I forvever dread and weep, thinking of the day you will one day retire. I would sacrifice my own life it were the only thing that could put a smile on your beautiful face. You have given me so much joy, and heartbreak over the years. I remember when you first left clevenland and its like my heart got broken into a million pieces. But a tear still fell from my right eye when I watched you win your first ring in miami, because deep down, my glorious king deserved it. I just wanted you to return home. Then allas, you did, my sweet baby boy came home and I rejoiced. 2015 was a hard year for us baby, but in 2016 you made history happen. You came back from 3-1 and I couldn't believe it. I was crying, bawling even, and I heard my glorious king exclaim these words, "CLEVELAND, THIS IS FOR YOU!" Not only have you changed the game of basketball and the world forever, but you've eternally changed my world. And now you're getting older, but still the goat, my goat. I love you pookie bear, my glorious king, Lebron James.</p>
+        </section>
+
+        <!-- Fun Facts Section -->
+        <section class="fun-facts">
+          <h2>Fun Facts</h2>
+          <p>LeBron James has scored more than 35,000 points over his career!</p>
+          <p>LeBron holds the record for most consecutive double-digit scoring games.</p>
+        </section>
+      </main>
+      <footer>Created by Your Name</footer>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollToTopBtn">↑</button>
+
+    <!-- Lightbox for Image Enlargement -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+      // JavaScript for Lightbox
+      function openLightbox(element) {
+        const imgSrc = element.querySelector("img").src;
+        document.getElementById("lightbox-img").src = imgSrc;
+        document.getElementById("lightbox").style.display = "flex";
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+
+      // Scroll to Top Function
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Show Scroll-to-Top Button on Scroll
+      window.onscroll = function () {
+        const button = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
